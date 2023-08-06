@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ContactMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Event;
 
 class ContactController extends Controller
 {
@@ -20,6 +22,7 @@ class ContactController extends Controller
             'email'   => ['required' ,  'email']
         ]);
         Contact::create($request->toArray());
+         Event::dispatch(new ContactMail($request->toArray()));
         return back()->with('success' , 'Your Mail Sent Successfully');
     }
 
