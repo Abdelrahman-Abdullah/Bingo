@@ -33,7 +33,7 @@ class SocialController extends Controller
                 'social_id'   => $user->id,
                 'social_type' => 'google',
                 'password'   => bcrypt(12345),
-                'thumbnail'  => $user->avatar ?? 'images/client-logo/default-user-logo.png',
+                'thumbnail'  => $user->avatar ,
             ]);
             Auth::login($newUser);
             return  redirect('/');
