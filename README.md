@@ -1,6 +1,6 @@
 <h1 align="center" style="font-size: 40px">Bingo</h1>
 
-# Home 
+# Home
 <img src="public/github/home.png">
 
 # Panel
