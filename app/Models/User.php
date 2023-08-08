@@ -79,8 +79,4 @@ class User extends Authenticatable implements FilamentUser
         return $this->hasMany(Comment::class);
     }
 
-    public function socialLink(): HasOne
-    {
-        return $this->hasOne(SocialLink::class );
-    }
 }
