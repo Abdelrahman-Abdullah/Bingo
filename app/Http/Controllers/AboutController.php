@@ -12,7 +12,7 @@ class AboutController extends Controller
     {
         return view('about' , [
             'galleries' => Gallery::all(),
-            'teamMembers' => User::with('socialLink')->take(3)->get()
+            'teamMembers' => User::where('is_admin' , true)->inRandomOrder()->take(3)->get()
         ]);
     }
 }
