@@ -2,7 +2,7 @@
 <article class="col-lg-4 col-md-6 mt-5">
     <div class="post-item">
         <div class="media-wrapper">
-            <img loading="lazy" src="{{asset('images/blog/post-1.jpg')}}" alt="amazing caves coverimage" class="img-fluid">
+            <img loading="lazy" src="{{asset($post->thumbnail)}}" alt="amazing caves coverimage" class="img-fluid">
         </div>
 
         <div class="content">

@@ -11,7 +11,7 @@
                 <div class="col-lg-8">
                     <article class="post">
                         <div class="post-image mb-5">
-                            <img loading="lazy" class="img-fluid w-100" src="{{asset('images/blog/post-1.jpg')}}" alt="post-image">
+                            <img loading="lazy" class="img-fluid w-100" src="{{asset($post->thumbnail)}}" alt="post-image">
                         </div>
                         <!-- Post Content -->
                         <div class="post-content">
