@@ -20,11 +20,12 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'is_admin' => fake()->randomElement([0,1]),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => bcrypt(12345), // password
             'remember_token' => Str::random(10),
-            'thumbnail' => fake()->image(),
+            'thumbnail' => 'images/client-logo/default-user-logo.png',
             'phone' => fake()->phoneNumber(),
             'position' => fake()->jobTitle(),
             'bio' => fake()->paragraph(4),

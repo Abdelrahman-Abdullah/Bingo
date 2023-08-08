@@ -22,11 +22,12 @@ class PostFactory extends Factory
 
         return [
             'title' => fake()->jobTitle(),
-            'content' => fake()->paragraph(5),
-            'thumbnail' => fake()->image(),
-            'author_id' => User::select('id')->inRandomOrder()->take(1)->pluck('id')[0],
+            'content' => fake()->paragraph(4),
+            'thumbnail' => 'images/blog/post-default.jpg',
+            'slug' => fake()->slug(),
+            'is_published' => fake()->randomElement([0,1]),
+            'author_id' => fake()->randomElement(User::where('is_admin' , true)->pluck('id')),
             'category_id' => Category::factory(),
-            'slug' => fake()->slug()
         ];
     }
 }
