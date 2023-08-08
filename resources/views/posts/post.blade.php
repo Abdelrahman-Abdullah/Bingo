@@ -27,25 +27,6 @@
                             <p>
                                 {{$post->content}}
                             </p>
-
-                            <ul class="post-content-share list-inline mb-5">
-                                <li class="list-inline-item">
-                                    <a href="https://{{$post->author->socialLink->twitter ?? ''}}">
-                                        <i class="tf-ion-social-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="https://themefisher.com/">
-                                        <i class="tf-ion-social-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="https://{{$post->author->socialLink->facebook ?? ''}}">
-                                        <i class="tf-ion-social-facebook"></i>
-                                    </a>
-                                </li>
-                            </ul>
-
                             @auth
                                  <h3>{{$post->comments->count()}} comments</h3>
                             @endauth
