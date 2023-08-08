@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="filtr-container">
-                                @foreach($portfolio as $singlePortfolio)
+                                @forelse($portfolio as $singlePortfolio)
                                     <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, {{$singlePortfolio->category->name}}">
                                         <div class="portfolio-block">
                                             <img class="img-fluid" src="{{asset('storage/'.$singlePortfolio->path)}}" alt="">
@@ -37,7 +37,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                @empty
+                                    <div>
+                                        <h2>
+                                            Not Yet! Sign as Admin To Add Portfolio
+                                        </h2>
+                                    </div>
+                                @endforelse
                             </div>
                         </div>
                     </div>
