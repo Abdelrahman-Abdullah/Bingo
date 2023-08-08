@@ -32,31 +32,5 @@ class AppServiceProvider extends ServiceProvider
             'others',
         ]);
 
-        View::composer(['index' ,'posts.post'],function ($view){
-            $view->with('latestPosts' ,
-                Post::where('is_published',true)->select([
-                    'title' , 'thumbnail' , 'content' , 'created_at'
-                ])->latest()->take(3)->get()
-            );
-        });
-
-        View::composer(['index' , 'portfolio'] , function ($view){
-            $view->with('clients' ,
-                cache::remember('clients' , 3600 ,
-                    fn() =>
-                    User::select([
-                        'name' , 'bio' , 'thumbnail' , 'position','id'
-                    ])->inRandomOrder()->take(3)->get()
-                )
-            );
-        });
-
-        View::composer('posts.post' , function ($view){
-            $view->with('categories' ,
-                cache::remember('categories' , 3600 , function (){
-                    return Category::all();
-                })
-            );
-        });
     }
 }

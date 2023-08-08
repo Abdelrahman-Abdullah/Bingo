@@ -21,7 +21,11 @@ class PostController extends Controller
     public function show($post)
     {
         $post = Post::where('title' , $post)->with('author' , 'comments')->first();
-        return view('posts.post' , compact('post'));
+
+        $categories = cache::remember('categories' , 3600 , function (){
+            return Category::all();
+        });
+        return view('posts.post' , compact('post' ,'categories'));
     }
 }
 
