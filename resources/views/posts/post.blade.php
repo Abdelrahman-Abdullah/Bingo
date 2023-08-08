@@ -54,7 +54,7 @@
                                 @foreach($post->comments as $comment)
                                     <li class="comment-list-item">
                                         <div class="comment-list-item-image">
-                                            <img loading="lazy" width="80" height="80" src="{{asset("storage/".$comment->user->thumbnail)}}" alt="comment-img">
+                                            <img loading="lazy" width="80" height="80" src="{{$comment->user->social_type ? $comment->user->thumbnail : asset("storage/".$comment->user->thumbnail)}}" alt="comment-img">
                                         </div>
                                         <div class="comment-list-item-content">
                                             <h5>{{$comment->user->name}}</h5>
@@ -69,7 +69,6 @@
                                 <!-- Comment Form -->
                                 <form action="/comment/{{$post->id}}" class="comment-form" method="POST">
                                     @csrf
-{{--                                    <input type="hidden" name="post_id" value="{{$post->id}}">--}}
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12">
                                             <textarea class="form-control" name="msg" id="msg" rows="6" placeholder="Message" required></textarea>
@@ -120,7 +119,7 @@
                                         </div>
                                         <div class="widget-post-content">
                                             <a href="/post/{{$latestPost->title}}">
-                                                <h5 class="f">{{$latestPost->title}}</h5 class=f>
+                                                <h5 class="f">{{$latestPost->title}}</h5>
                                             </a>
                                             <h6>{{$latestPost->created_at->diffForHumans()}}</h6>
                                         </div>
