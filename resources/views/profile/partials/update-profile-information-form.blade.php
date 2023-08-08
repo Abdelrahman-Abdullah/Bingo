@@ -51,7 +51,7 @@
             <x-input-label for="photo" :value="__('Photo')" />
             <x-text-input id="photo" name="thumbnail" type="file" class="mt-1 block border-t-blue-200 border w-full" :value="old('name', $user->thumbnail)"  autofocus autocomplete="thumbnail" />
             <x-input-error class="mt-2" :messages="$errors->get('thumbnail')" />
-            <img src="{{$user->socail_type ? $user->thumbnail : asset('storage/'.$user->thumbnail) }}" class="w-48 mt-3">
+            <img src="{{$user->social_type ? $user->thumbnail : asset('storage/'.$user->thumbnail) }}" class="w-48 mt-3">
         </div>
 
         <div class="flex items-center gap-4">
