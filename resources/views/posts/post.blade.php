@@ -95,10 +95,10 @@
                                     <li class="widget-post-list-item  justify-content-around">
                                         <div class="widget-post-image">
                                             <a href="/post/{{$latestPost->title}}">
-                                                <img loading="lazy" class="max-w-xl" src="{{asset('images/blog/post-1.jpg')}}" alt="post-img">
+                                                <img loading="lazy" class="w-100" src="{{asset("storage/".$latestPost->thumbnail)}}" alt="post-img">
                                             </a>
                                         </div>
-                                        <div class="widget-post-content">
+                                        <div class="widget-post-content w-50">
                                             <a href="/post/{{$latestPost->title}}">
                                                 <h5 class="f">{{$latestPost->title}}</h5>
                                             </a>
