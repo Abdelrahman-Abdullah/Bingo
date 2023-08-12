@@ -36,6 +36,12 @@ Now Launch
 php artisan serve 
 ```
 
+## Notes
+- You Can log in as User or Admin
+- Admin Only Can Create and Delete Posts and other things
+- All Account's Password is `12345` You Should Change it
+
+
 ## Future Feature
 - Improve More components
 - Cash Clear From Admin Panel Using Events or Filament
