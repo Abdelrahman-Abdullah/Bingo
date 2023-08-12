@@ -46,3 +46,7 @@ php artisan serve
 - Improve More components
 - Cash Clear From Admin Panel Using Events or Filament
 - Dashboard Logout Redirect To Home
+
+
+## Blog Short Video
+[Linkedin Video](https://www.linkedin.com/posts/abdelrahman-abdullah-85817a274_bingo-manage-blog-posts-with-multiple-authentication-activity-7096169244404383745-6wpE?utm_source=share&utm_medium=member_desktop)
