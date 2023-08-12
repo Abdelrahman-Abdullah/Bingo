@@ -10,10 +10,5 @@ class ListContacts extends ListRecords
 {
     protected static string $resource = ContactResource::class;
 
-    protected function getActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
+
 }
