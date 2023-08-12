@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            // TODO: change the column name to something more meaningful
             $table->string('property');
             $table->timestamps();
         });

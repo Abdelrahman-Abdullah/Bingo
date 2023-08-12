@@ -27,7 +27,8 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-
+        // TODO: This is a good practice, Using dedicated request class for validation
+        // TODO: But why not saving the model from the first step?
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {

@@ -22,7 +22,6 @@ class SendContactMail
      */
     public function handle(ContactMail $event): void
     {
-
         Mail::to($event->contact['email'])->send(new \App\Mail\ContactMail($event->contact));
     }
 }

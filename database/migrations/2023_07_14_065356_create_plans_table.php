@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->id();
+            // TODO: price is better to be decimal for more accurate calculations
             $table->double('price');
             $table->string('type');
             $table->string('description');

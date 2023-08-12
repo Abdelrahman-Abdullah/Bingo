@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
+    // TODO: Single Action Controller must not be used for interacting with resources
     public function __invoke()
     {
         $portfolio = Portfolio::with('category')->get();
