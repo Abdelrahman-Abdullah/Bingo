@@ -25,3 +25,18 @@ MAIL_PORT='Here'
 MAIL_USERNAME='Here'
 MAIL_PASSWORD='Here'
 ```
+Run Migration With Seeding
+```
+php artisan migrate --seed
+```
+
+Now Launch
+
+```
+php artisan serve 
+```
+
+## Future Feature
+- Improve More components
+- Cash Clear From Admin Panel Using Events or Filament
+- Dashboard Logout Redirect To Home
