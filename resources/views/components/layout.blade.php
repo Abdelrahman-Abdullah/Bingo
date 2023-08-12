@@ -108,6 +108,10 @@ Fixed Navigation
                                             <li>
                                                  <a href="{{ url('/profile') }}" class="dropdown-item">Profile</a>
 
+                                                @can('access-dashboard')
+                                                    <a href="{{ url('/admin') }}" class="dropdown-item">Dashboard</a>
+                                                @endcan
+
                                                 <form method="POST" action="{{ route('logout') }}">
                                                     @csrf
 
@@ -118,9 +122,7 @@ Fixed Navigation
                                                     </x-dropdown-link>
                                                 </form>
 
-                                                @can('access-dashboard')
-                                                    <a href="{{ url('/admin') }}" class="dropdown-item">Dashboard</a>
-                                                @endcan
+
                                             </li>
                                         @else
                                             <li>
