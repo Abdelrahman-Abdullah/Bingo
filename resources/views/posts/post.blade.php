@@ -27,9 +27,7 @@
                             <p>
                                 {{$post->content}}
                             </p>
-                            @auth
-                                 <h3>{{$post->comments->count()}} comments</h3>
-                            @endauth
+
                             <ul class="comment-list">
                                 <!-- comment list -->
                                 @foreach($post->comments as $comment)
@@ -88,7 +86,7 @@
                             </ul>
                         </div>
                         <div class="widget-post widget">
-                            <h2>Latest Post</h2>
+                            <h2>Latest Posts</h2>
                             <!-- latest post -->
                             <ul class="widget-post-list ">
                                 @foreach($latestPosts as $latestPost)
