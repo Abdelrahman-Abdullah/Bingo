@@ -13,6 +13,7 @@ class Post extends Model
     use HasFactory;
     protected $fillable = ['title' , 'content' , 'thumbnail' , 'slug' , 'category_id' , 'author_id', 'is_published'];
 
+    // TODO: use Dedicated Class for Queries ( Query Builder )
     public function scopeFilter($query , array $filters)
     {
         $query->when($filters['category'] ?? false , function ($query , $category){

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('path');
 
+            // TODO: use foreignId() instead of unsignedBigInteger() it's more readable
             $table->unsignedBigInteger('portfolio_category_id')
                 ->nullable();
 

@@ -29,7 +29,10 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/posts',  'index');
     Route::get('/post/{post:title}', 'show');
 });
+// TODO: use region to collapse the following routes
+#region CRUD
 
+#endregion
 // Invokable Controllers  **************
     Route::get('/about', AboutController::class);
     Route::get('/service', ServiceController::class );
